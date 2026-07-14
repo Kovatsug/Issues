@@ -14,9 +14,9 @@ public class Ex2 {
 		Scanner input = new Scanner(System.in);
 		int[] numeros = new int[5];
 
-		System.out.println("Digite 5 n�meros:");
-		for (int i = 1; i < numeros.length; i++) {
-			System.out.print("N�mero " + (i) + ": ");
+		System.out.println("Digite 5 números:");
+		for (int i = 0; i < numeros.length; i++) {
+			System.out.print("Número " + (i+1) + ": ");
 			numeros[i] = input.nextInt();
 		}
 
@@ -31,12 +31,13 @@ public class Ex2 {
 				maior = num;
 			}
 			if (num < menor) {
-				maior = num;
+				menor = num;
 			}
 			soma += num;
 		}
 
-		double media = soma / numeros.length;
+		double media = (double) soma / numeros.length;
+		System.out.println(soma);
 
 		System.out.println("Maior numero: " + maior);
 		System.out.println("Menor numero: " + menor);
